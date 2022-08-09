@@ -340,7 +340,11 @@ var handleCompleted = function(mq){
                         $(".swiper-slide-active").find(".ctrl a").eq(1).trigger("click");
 
                         setTimeout(function(){
-                            _swiper.slideNext();
+                            if( currentIdx === _swiper.slides.length-1 ){
+                                _swiper.slideTo(0);
+                            }else{
+                                _swiper.slideNext();
+                            }
                         }, 3000);
 
                     }, 3000);
@@ -349,6 +353,7 @@ var handleCompleted = function(mq){
                        _swiper.slideNext();
                     }, 3000);
                 }
+                // 페이지 이동이 끝나면 다시 순위를 1-10위로 바꿔야 함 리셋? 잘 모르겠음
             },
             slideChangeTransitionEnd : function(_swiper){
                 let currentIdx = _swiper.activeIndex;
@@ -358,27 +363,25 @@ var handleCompleted = function(mq){
                         $(".swiper-slide-active").find(".ctrl a").eq(1).trigger("click");
 
                         setTimeout(function(){
-                            _swiper.slideNext();
+                            if( currentIdx === _swiper.slides.length-1 ){
+                                _swiper.slideTo(0);
+                            }else{
+                                _swiper.slideNext();
+                            }
                         }, 3000);
 
                     }, 3000);
                 }else{
                     setTimeout(function(){
                         if( currentIdx === _swiper.slides.length-1 ){
+                            console.log("마지막")
                             _swiper.slideTo(0);
                         }else{
                             _swiper.slideNext();
                         }
                     }, 3000);
                 }
-            },
-            // beforeTransitionStart : function(_swiper){
-            //     if( $(".swiper-slide-active").hasClass("rank") ){
-            //         setTimeout(function(){
-            //             $(".swiper-slide-active").find(".ctrl a").eq(0).trigger("click");
-            //         });
-            //     }
-            // }
+            }
         }
     });
     mq.next();
