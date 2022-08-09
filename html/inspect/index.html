@@ -1,0 +1,84 @@
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--
+    <link rel="stylesheet" href="/css/small_screen.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    -->
+    <link rel="stylesheet" href="../inc/css/small_screen.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/JavaScript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123167576-4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-123167576-4');
+    </script>
+    <title>배틀팟(BATTLEPOD)</title>
+    <script>
+        (function(d) {
+            var config = { kitId: 'xcm2auf', scriptTimeout: 3000, async: true },
+                h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+    </script>
+</head>
+<body>
+<div id="screen" class="resizable">
+    <div id="screen_header" class="on">
+        <div class="left_item">
+            <a href="https://battlepod.playdonut.com/#utm_source=dapp&utm_medium=click&utm_campaign=logo" class="logo" target="_blank">
+                <img src="../inc/img/screen/header_logo.png" alt="" class="logo_img">
+                <span>배틀팟 점검</span>
+            </a>
+            <!-- <span class="space">|</span> -->
+            <!--  <a href="#none" class="rank_link">전체순위보기</a>  -->
+        </div>
+        <div class="right_item">
+            <a href="https://battlepod.playdonut.com/#utm_source=dapp&utm_medium=click&utm_campaign=close" class="btn_window_closed">
+                <div class="window_close"></div>
+            </a>
+        </div>
+    </div>
+    <div id="screen_body" class="inspection">
+        <div class="box">
+            <div class="char"></div>
+            <h3>서비스 점검 중 입니다.</h3>
+            <p>
+                안정적인 서비스를 제공하기 위해 시스템 점검을 진행하고 있습니다. <br>
+                ※ 시스템 점검 시간은 상황에 따라 다소 연장될 수 있습니다.
+            </p>
+            <div class="warning inspection">
+                <span>점검일시 : 2022년 03월 04일 ~ 2022년 03월 05일 </span>
+            </div>
+            <div class="warning">
+                <span>문의 : 010-9107-3053</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const resizeWindow = function(){
+        $(window).on("resize", function(){
+            var scale = $(window).outerWidth()/1920;
+
+            gsap.set( $("#screen"), { scale : scale ,  transformOrigin : "0% 0%"});
+        })
+        $(window).trigger("resize");
+    }
+    $("#screen.resizable").length > 0 && resizeWindow();
+
+    const _date = new Date();
+    const year = _date.getFullYear();
+    const month = _date.getMonth()+1;
+    const day = _date.getDay()
+
+    console.log( year , month , day )
+    $(".warning.inspection span").html(`점검일시 : ${year}년 ${month}년  ${day}일 ~ 완료까지`);
+</script>
+</body>
+</html>

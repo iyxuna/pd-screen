@@ -1,0 +1,66 @@
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./inc/css/small_screen.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/JavaScript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123167576-4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-123167576-4');
+    </script>
+    <title>배틀팟(BATTLEPOD)</title>
+    <!--    abobe font embed -->
+    <script>
+        (function(d) {
+            var config = { kitId: 'xcm2auf', scriptTimeout: 3000, async: true },
+                h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+    </script>
+    <!--//    abobe font embed -->
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+</head>
+<body>
+<div id="screen" class="resizable">
+    <div id="screen_header" class="on">
+        <div class="left_item">
+            <a href="https://battlepod.playdonut.com/#utm_source=dapp&utm_medium=click&utm_campaign=logo" class="logo" target="_blank">
+                <img src="./inc/img/screen/header_logo.png" alt="" class="logo_img">
+                <span>배틀팟 토너먼트</span>
+            </a>
+            <!-- <span class="space">|</span> -->
+            <!--  <a href="#none" class="rank_link">전체순위보기</a>  -->
+        </div>
+        <div class="right_item">
+            <a href="https://battlepod.playdonut.com/login#utm_source=dapp&utm_medium=click&utm_campaign=login" class="join">로그인/회원가입</a>
+            <a href="https://battlepod.playdonut.com/#utm_source=dapp&utm_medium=click&utm_campaign=close" class="btn_window_closed">
+                <div class="window_close"></div>
+            </a>
+        </div>
+    </div>
+    <div id="screen_body">
+        <div class="loading">
+            <img src="./inc/img/screen/loading.png" alt="">
+        </div>
+        <div class="swiper">
+            <div id="wrap" class="swiper-wrapper">
+
+            </div>
+        </div>
+        <div class="pagination">
+
+        </div>
+    </div>
+</div>
+<script src="./inc/js/screen_model.js"></script>
+<script src="./inc/js/small_screen.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "available": true,
+  "config": {
+    "width": 833,
+    "height": 505,
+    "x": 300,
+    "y": 60,
+    "resizable": false,
+    "backgroundColor": "#000",
+    "titleBarStyle": "hidden",
+    "fullscreen": false
+  },
+  "message": "정상!!",
+  "start_at": "22.03.05 11:00",
+  "end_at": "22.03.05 16:00",
+  "closed_stores" : [
+    "포탈PC_강남"
+  ]
+}
